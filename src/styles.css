@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files 
+body {
+    background: url('assets/images.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+  */
+ 
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .navbar-light.bg-light.dark-mode {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+  }
+  
+  .card.dark-mode {
+    background-color: #444444;
+    color: #ffffff;
+  }
+  
+  .btn-primary.dark-mode {
+    background-color: #555555;
+    border-color: #555555;
+  }
+  
+  /* Asegúrate de que el fondo del contenedor también se oscurezca */
+  .container.dark-mode {
+    background-color: #121212;
+  }
+  
