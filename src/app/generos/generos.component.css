@@ -1,0 +1,131 @@
+/* Estilos generales para el modo oscuro */
+:host-context(body.dark-mode) {
+  background-color: #333;
+  color: #fff;
+}
+
+:host-context(body.dark-mode) .navbar,
+:host-context(body.dark-mode) .card,
+:host-context(body.dark-mode) .btn-primary {
+  background-color: #333 !important;
+  color: #fff;
+}
+
+:host-context(body.dark-mode) .navbar-nav .nav-link,
+:host-context(body.dark-mode) .btn-outline-secondary {
+  color: #fff !important;
+}
+
+:host-context(body.dark-mode) .btn-outline-secondary {
+  border-color: #fff;
+}
+
+:host-context(body.dark-mode) .alert-info {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.generos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.pestanas {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.pestanas button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pestanas button.activo {
+  background-color: #007bff;
+  color: white;
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Ajusta el espacio entre las tarjetas */
+  overflow: hidden; /* Asegura que las imágenes no se desborden */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  text-align: center;
+  padding: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+  color: inherit;
+}
+
+.navbar-nav.ml-auto {
+  margin-left: auto;
+}
+
+.navbar-nav .btn-outline-secondary {
+  margin-left: 15px;
+}
+
+.navbar-nav .fa {
+  font-size: 1.5rem;
+}
+
+/* Modo claro fijo para la barra de navegación */
+.fixed-light {
+  background-color: #f8f9fa !important;
+}
+
+.fixed-light .navbar-brand,
+.fixed-light .nav-link {
+  color: #000 !important;
+}
+
+.fixed-light .btn-outline-secondary {
+  color: #000 !important;
+}
+
+.fixed-light .fa-user {
+  color: #000 !important;
+}

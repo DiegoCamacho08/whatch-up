@@ -1,0 +1,49 @@
+<div class="main-container" [ngClass]="{'dark-mode': isDarkMode}">
+  <nav class="navbar navbar-expand-lg navbar-light" [ngClass]="{'dark-mode': isDarkMode, 'navbar-dark': isDarkMode, 'bg-dark': isDarkMode, 'bg-light': !isDarkMode}">
+    <a class="navbar-brand" href="#">Watch-up</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/home']">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/generos']">Géneros</a></li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button class="btn btn-outline-secondary btn-custom" (click)="toggleMode()">
+            <i class="fa" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-user"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="generos-container">
+    <div class="pestanas">
+      <button [ngClass]="{'activo': pestanaActiva === 'series'}" (click)="cambiarPestana('series')" class="btn-custom">Series</button>
+      <button [ngClass]="{'activo': pestanaActiva === 'peliculas'}" (click)="cambiarPestana('peliculas')" class="btn-custom">Películas</button>
+    </div>
+
+    <div class="container mt-4" [ngClass]="{'dark-mode': isDarkMode}">
+      <h1>{{ pestanaActiva === 'series' ? 'Series' : 'Películas' }}</h1>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let item of (pestanaActiva === 'series' ? series : peliculas)">
+          <div class="card mb-4" [ngClass]="{'dark-mode': isDarkMode}">
+            <img [src]="item.poster" class="card-img-top" [alt]="'Carátula de ' + item.titulo">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.titulo }}</h5>
+              <p class="card-text">{{ item.descripcion }}</p>
+              <a [routerLink]="['/movie-detail', item.id]" class="btn btn-primary btn-custom" [ngClass]="{'dark-mode': isDarkMode}">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

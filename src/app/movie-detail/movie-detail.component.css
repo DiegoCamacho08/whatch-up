@@ -1,0 +1,238 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+:host-context(body.dark-mode) {
+  background-color: #333;
+  color: #fff;
+}
+
+:host-context(body.dark-mode) .navbar {
+  background-color: #333 !important;
+  color: #fff;
+}
+
+:host-context(body.dark-mode) .navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+:host-context(body.dark-mode) .btn-outline-secondary {
+  border-color: #fff;
+  color: #fff;
+}
+
+:host-context(body.dark-mode) .alert-info {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+:host-context(body.dark-mode) .movie-detail-container {
+  background-color: #333;
+  color: #fff;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+  color: inherit;
+}
+
+.navbar-nav.ml-auto {
+  margin-left: auto;
+}
+
+.navbar-nav .btn-outline-secondary {
+  margin-left: 15px;
+}
+
+.navbar-nav .fa {
+  font-size: 1.5rem;
+}
+
+.content-container {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: inherit;
+  min-height: 100vh;
+}
+
+.movie-detail-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px;
+}
+
+.movie-poster {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+}
+
+.movie-info {
+  max-width: 600px;
+}
+
+.movie-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.movie-description {
+  margin-bottom: 10px;
+}
+
+.movie-genre, .movie-year, .movie-status {
+  margin-bottom: 5px;
+}
+
+.alert {
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.alert-info {
+  background-color: #d9edf7;
+  color: #31708f;
+  border: 1px solid #bce8f1;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.two-column-layout {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.comment-section {
+  flex: 1;
+  max-width: 60%;
+  background-color: var(--comment-bg, #f9f9f9);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.random-movies {
+  position: sticky;
+  top: 20px;
+  width: 300px;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  align-self: flex-start;
+}
+
+.random-movies h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.random-movies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.random-movie {
+  text-align: center;
+}
+
+.random-movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.random-movie-title {
+  color: white;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form textarea {
+  resize: none;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.comment-form .button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.comment-form .btn {
+  padding: 5px 15px;
+}
+
+.comment {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment-author {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.comment-text {
+  margin-bottom: 0.5rem;
+}
+
+.comment-date {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+:host-context(body.dark-mode) .comment-section {
+  background-color: #444;
+  color: #fff;
+}
+
+:host-context(body.dark-mode) .random-movies {
+  background-color: rgba(255, 255, 255, 0.1);
+}
